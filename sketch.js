@@ -31,6 +31,7 @@ function setup() {
 	 World.add(world,dustbinR);
 
 	 paper=new CrumbledPaper(100,470,15);
+	 paper.velocityX=60;
 	 World.add(world,paper);
 
 	Engine.run(engine);
@@ -54,7 +55,7 @@ function draw() {
 
 function keyPressed(){
 	if (keyCode === UP_ARROW){
-		Matter.Body.applyForce(paper.body, paper.body.position, {x:60,y:-60});
+		Matter.Body.applyForce(paper.body, paper.body.position, {x:30,y:-40});
 	}
 }
 
