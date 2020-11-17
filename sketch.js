@@ -6,10 +6,6 @@ const Body = Matter.Body;
 
 var ground,ball,dustbin;
 
-function preload()
-{
-	
-}
 
 function setup() {
 	createCanvas(800, 500);
@@ -22,17 +18,14 @@ function setup() {
 	ground=new Ground(400,490,800,10);
 	
 	dustbin=new Dustbin(650,480,100,10);
-	World.add(world,dustbin);
 
 	dustbinL=new Dustbin(600,440,10,80);
-	 World.add(world,dustbinL);
 
-	 dustbinR=new Dustbin(700,440,10,80);
-	 World.add(world,dustbinR);
+	dustbinR=new Dustbin(700,440,10,80);
+	
 
 	 paper=new CrumbledPaper(100,470,15);
-	 paper.velocityX=60;
-	 World.add(world,paper);
+	 
 
 	Engine.run(engine);
   
